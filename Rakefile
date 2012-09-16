@@ -1,7 +1,7 @@
 #!/usr/bin/env rake
 require "bundler/gem_tasks"
 require 'rake/testtask'
-require 'rake/rdoctask'
+require 'rdoc/task'
 
 Rake::TestTask.new do |t|
   t.libs << 'test'

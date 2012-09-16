@@ -125,10 +125,10 @@ class DebugherTest < Test::Unit::TestCase
   #
   def test_user_agent
     @ua = Debugger.user_agent
-
-    # Enough of a test that we're getting the User agent
-    # even if we don't have the version #.
     assert_equal @ua, "Rakkit/V#{Debugher::VERSION}"
+
+    @ua = Debugger.user_agent("PANDR")
+    assert_equal @ua, "PANDR/V#{Debugher::VERSION}"
   end
 
   def test_version

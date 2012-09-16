@@ -9,7 +9,7 @@ Gem::Specification.new do |gem|
                           This is used by the Rakkit Debugger to output what information we can gather about various pages on an adhoc basis.
                           The library is also used by the Rakkit spider to process and index pages across the web.
                         }
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.summary       = %q{Methods for the Rakkit Debugger.}
   gem.homepage      = ""
 
   gem.files         = `git ls-files`.split($\)

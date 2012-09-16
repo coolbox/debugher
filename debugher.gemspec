@@ -19,12 +19,7 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
   gem.version       = Debugher::VERSION
 
-  gem.add_dependency "sinatra"
   gem.add_dependency 'nokogiri'
   gem.add_dependency "addressable"
   gem.add_dependency 'robots'
-
-  gem.add_development_dependency "rspec"
-  gem.add_development_dependency "rack-test"
-  gem.add_development_dependency "simplecov"
 end

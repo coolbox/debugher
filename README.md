@@ -1,6 +1,9 @@
 # Debugher
 
-TODO: Write a gem description
+A handy set of methods for getting various bits of information about a web page.
+
+This is used by the Rakkit Debugger to output what information we can gather about various pages on an adhoc basis.
+The library is also used by the Rakkit spider to process and index pages across the web.
 
 ## Installation
 

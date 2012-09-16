@@ -1,0 +1,1659 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: Debugher::Debugger</title>
+
+  <link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../lib/debugher_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/debugher.rb">lib/debugher.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link">Object</p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-get_soundcloud_url">::get_soundcloud_url</a></li>
+          
+          <li><a href="#method-c-mailto_link-3F">::mailto_link?</a></li>
+          
+          <li><a href="#method-c-make_absolute">::make_absolute</a></li>
+          
+          <li><a href="#method-c-new">::new</a></li>
+          
+          <li><a href="#method-c-relative-3F">::relative?</a></li>
+          
+          <li><a href="#method-c-soundcloud_url-3F">::soundcloud_url?</a></li>
+          
+          <li><a href="#method-c-stitch_to_make_absolute">::stitch_to_make_absolute</a></li>
+          
+          <li><a href="#method-c-user_agent">::user_agent</a></li>
+          
+          <li><a href="#method-c-valid_url-3F">::valid_url?</a></li>
+          
+          <li><a href="#method-c-version">::version</a></li>
+          
+          <li><a href="#method-i-atom_feed_url">#atom_feed_url</a></li>
+          
+          <li><a href="#method-i-canonical_url">#canonical_url</a></li>
+          
+          <li><a href="#method-i-charset">#charset</a></li>
+          
+          <li><a href="#method-i-content_encoding">#content_encoding</a></li>
+          
+          <li><a href="#method-i-content_type">#content_type</a></li>
+          
+          <li><a href="#method-i-description">#description</a></li>
+          
+          <li><a href="#method-i-feed_url">#feed_url</a></li>
+          
+          <li><a href="#method-i-fetched_url">#fetched_url</a></li>
+          
+          <li><a href="#method-i-host">#host</a></li>
+          
+          <li><a href="#method-i-internal_links">#internal_links</a></li>
+          
+          <li><a href="#method-i-last_modified">#last_modified</a></li>
+          
+          <li><a href="#method-i-meta_data">#meta_data</a></li>
+          
+          <li><a href="#method-i-music_from_feed">#music_from_feed</a></li>
+          
+          <li><a href="#method-i-music_from_html">#music_from_html</a></li>
+          
+          <li><a href="#method-i-music_from_soundcloud">#music_from_soundcloud</a></li>
+          
+          <li><a href="#method-i-open_url">#open_url</a></li>
+          
+          <li><a href="#method-i-page">#page</a></li>
+          
+          <li><a href="#method-i-page_links">#page_links</a></li>
+          
+          <li><a href="#method-i-response_code">#response_code</a></li>
+          
+          <li><a href="#method-i-rss_feed_url">#rss_feed_url</a></li>
+          
+          <li><a href="#method-i-scrape_info">#scrape_info</a></li>
+          
+          <li><a href="#method-i-title">#title</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="../README_rdoc.html">README.rdoc</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../Debugher.html">Debugher</a></li>
+        
+          <li><a href="../Debugher/Debugger.html">Debugher::Debugger</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">Debugher::Debugger</h1>
+
+    <div id="description" class="description">
+      
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+      <!-- Constants -->
+      <div id="constants-list" class="section">
+        <h3 class="section-header">Constants</h3>
+        <dl>
+        
+          <dt><a name="FILE_TYPES">FILE_TYPES</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+        </dl>
+      </div>
+      
+
+      
+      <!-- Attributes -->
+      <div id="attribute-method-details" class="method-section section">
+        <h3 class="section-header">Attributes</h3>
+
+        
+        <div id="url-attribute-method" class="method-detail">
+          <a name="url"></a>
+          
+          <a name="url="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">url</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+      </div><!-- attribute-method-details -->
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="get_soundcloud_url-method" class="method-detail ">
+          <a name="method-c-get_soundcloud_url"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">get_soundcloud_url</span><span
+              class="method-args">(url)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Extract the URL element of a soundcloud embed in order to grab the link to
+the track.</p>
+
+<p>Example:</p>
+
+<pre>&gt;&gt; Debugger.get_soundcloud_url(&quot;https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F59422468&quot;)
+=&gt; http://api.soundcloud.com/tracks/59422468</pre>
+
+<p>Arguments:</p>
+
+<pre>url: (String)</pre>
+            
+
+            
+            <div class="method-source-code" id="get_soundcloud_url-source">
+<pre>
+<span class="ruby-comment"># File lib/debugher.rb, line 435</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">get_soundcloud_url</span>(<span class="ruby-identifier">url</span>)
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-identifier">uri</span> = <span class="ruby-constant">URI</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">url</span>)
+    <span class="ruby-identifier">new_url</span> = <span class="ruby-identifier">uri</span>.<span class="ruby-identifier">query</span>.<span class="ruby-identifier">split</span>(<span class="ruby-string">&quot;&amp;&quot;</span>).<span class="ruby-identifier">reject</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">q</span><span class="ruby-operator">|</span> <span class="ruby-identifier">q</span>[<span class="ruby-value">0</span><span class="ruby-operator">..</span><span class="ruby-value">2</span>] <span class="ruby-operator">!=</span> <span class="ruby-string">&quot;url&quot;</span>}[<span class="ruby-value">0</span>]
+    <span class="ruby-identifier">new_url</span> = <span class="ruby-constant">CGI</span>.<span class="ruby-identifier">unescape</span>(<span class="ruby-identifier">new_url</span>[<span class="ruby-value">4</span><span class="ruby-operator">..</span><span class="ruby-identifier">new_url</span>.<span class="ruby-identifier">length</span>])
+
+    <span class="ruby-keyword">if</span> <span class="ruby-constant">Debugger</span>.<span class="ruby-identifier">soundcloud_url?</span>(<span class="ruby-identifier">new_url</span>)
+      <span class="ruby-keyword">return</span> <span class="ruby-identifier">new_url</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">rescue</span>
+    <span class="ruby-identifier">$stderr</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Bad URL - Soundcloud URL's don't cause errors so safe to assume it's not a Soundcloud link.&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- get_soundcloud_url-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- get_soundcloud_url-method -->
+
+      
+        <div id="mailto_link-3F-method" class="method-detail ">
+          <a name="method-c-mailto_link-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">mailto_link?</span><span
+              class="method-args">(url)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Check if a string is a mailto link</p>
+
+<p>Example:</p>
+
+<pre>&gt;&gt; Debugger.mailto_link?(&quot;mailto:pete@wearepandr.com&quot;)
+=&gt; true</pre>
+
+<p>Arguments:</p>
+
+<pre>url: (String)</pre>
+            
+
+            
+            <div class="method-source-code" id="mailto_link-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/debugher.rb, line 423</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">mailto_link?</span>(<span class="ruby-identifier">url</span>)
+  <span class="ruby-identifier">url</span>[<span class="ruby-value">0</span><span class="ruby-operator">..</span><span class="ruby-value">5</span>] <span class="ruby-operator">==</span> <span class="ruby-string">&quot;mailto&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- mailto_link-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- mailto_link-3F-method -->
+
+      
+        <div id="make_absolute-method" class="method-detail ">
+          <a name="method-c-make_absolute"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">make_absolute</span><span
+              class="method-args">(url, base_url=nil)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Make a URL absolute</p>
+
+<p>Example:</p>
+
+<pre>&gt;&gt; Debugger.make_absolute(&quot;/about&quot;, &quot;http://wearepandr.com&quot;)
+=&gt; http://wearepandr.com/about</pre>
+
+<p>Arguments:</p>
+
+<pre>url: (String)
+base_url: (String)</pre>
+            
+
+            
+            <div class="method-source-code" id="make_absolute-source">
+<pre>
+<span class="ruby-comment"># File lib/debugher.rb, line 383</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">make_absolute</span>(<span class="ruby-identifier">url</span>, <span class="ruby-identifier">base_url</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">Debugger</span>.<span class="ruby-identifier">relative?</span>(<span class="ruby-identifier">url</span>)
+    <span class="ruby-keyword">begin</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">base_url</span>.<span class="ruby-identifier">nil?</span>
+        <span class="ruby-identifier">base_url</span> = <span class="ruby-constant">Debugger</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">base_url</span>).<span class="ruby-identifier">canonical_url</span>
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-identifier">base_url</span> = <span class="ruby-identifier">canonical_url</span>
+      <span class="ruby-keyword">end</span>
+
+      <span class="ruby-identifier">url</span> = <span class="ruby-constant">Debugger</span>.<span class="ruby-identifier">stitch_to_make_absolute</span>(<span class="ruby-identifier">base_url</span>, <span class="ruby-identifier">url</span>)
+    <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Exception</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+      <span class="ruby-identifier">url</span> = <span class="ruby-keyword">nil</span>
+      <span class="ruby-identifier">$stderr</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Debugger Error: #{url} - #{e}&quot;</span>
+      <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;ERROR: Could not make this URL absolute. Set to nil.&quot;</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">url</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- make_absolute-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- make_absolute-method -->
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">new</span><span
+              class="method-args">(url)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>pass a url as a string to initialize</p>
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+<span class="ruby-comment"># File lib/debugher.rb, line 14</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">url</span>)
+  <span class="ruby-identifier">$stdout</span>.<span class="ruby-identifier">sync</span> = <span class="ruby-keyword">true</span>
+  <span class="ruby-ivar">@uri</span> = <span class="ruby-constant">URI</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">url</span>)
+  <span class="ruby-ivar">@url</span> = <span class="ruby-ivar">@uri</span>.<span class="ruby-identifier">class</span> <span class="ruby-operator">==</span> <span class="ruby-constant">URI</span><span class="ruby-operator">::</span><span class="ruby-constant">HTTP</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">url</span> <span class="ruby-operator">:</span> <span class="ruby-node">&quot;http://#{url}&quot;</span>
+  <span class="ruby-ivar">@uri</span> = <span class="ruby-constant">URI</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-ivar">@url</span>)
+  <span class="ruby-ivar">@opened_url</span> = <span class="ruby-identifier">open_url</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+
+      
+        <div id="relative-3F-method" class="method-detail ">
+          <a name="method-c-relative-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">relative?</span><span
+              class="method-args">(url)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Check if a URL is relative or not</p>
+
+<p>Example:</p>
+
+<pre>&gt;&gt; Debugger.relative?(&quot;http://wearepandr.com&quot;)
+=&gt; false</pre>
+
+<p>Arguments:</p>
+
+<pre>url: (String)</pre>
+            
+
+            
+            <div class="method-source-code" id="relative-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/debugher.rb, line 365</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">relative?</span>(<span class="ruby-identifier">url</span>)
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-ivar">@addressable_url</span> = <span class="ruby-constant">Addressable</span><span class="ruby-operator">::</span><span class="ruby-constant">URI</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">url</span>)
+    <span class="ruby-keyword">return</span> <span class="ruby-ivar">@addressable_url</span>.<span class="ruby-identifier">relative?</span>
+  <span class="ruby-keyword">rescue</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- relative-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- relative-3F-method -->
+
+      
+        <div id="soundcloud_url-3F-method" class="method-detail ">
+          <a name="method-c-soundcloud_url-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">soundcloud_url?</span><span
+              class="method-args">(url)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Check if a string is a Soundcloud URL</p>
+
+<p>Example:</p>
+
+<pre>&gt;&gt; Debugger.soundcloud_url?(&quot;http://api.soundcloud.com/tracks/59422468&quot;)
+=&gt; http://api.soundcloud.com/tracks/59422468</pre>
+
+<p>Arguments:</p>
+
+<pre>url: (String)</pre>
+            
+
+            
+            <div class="method-source-code" id="soundcloud_url-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/debugher.rb, line 457</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">soundcloud_url?</span>(<span class="ruby-identifier">url</span>)
+  <span class="ruby-identifier">url</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-string">&quot;api.soundcloud.com&quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- soundcloud_url-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- soundcloud_url-3F-method -->
+
+      
+        <div id="stitch_to_make_absolute-method" class="method-detail ">
+          <a name="method-c-stitch_to_make_absolute"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">stitch_to_make_absolute</span><span
+              class="method-args">(canonical_url, path)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Stitch two strings together to make a single absolute url</p>
+
+<p>Example:</p>
+
+<pre>&gt;&gt; Debugger.stitch_to_make_absolute(&quot;http://wearepandr.com/&quot;, &quot;/about&quot;)
+=&gt; http://wearepandr.com/about</pre>
+
+<p>Arguments:</p>
+
+<pre>canonical_url: (String)
+path: (String)</pre>
+            
+
+            
+            <div class="method-source-code" id="stitch_to_make_absolute-source">
+<pre>
+<span class="ruby-comment"># File lib/debugher.rb, line 411</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">stitch_to_make_absolute</span>(<span class="ruby-identifier">canonical_url</span>, <span class="ruby-identifier">path</span>)
+  <span class="ruby-identifier">canonical_url</span>.<span class="ruby-identifier">chomp</span>(<span class="ruby-string">&quot;/&quot;</span>) <span class="ruby-operator">+</span> <span class="ruby-identifier">path</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- stitch_to_make_absolute-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- stitch_to_make_absolute-method -->
+
+      
+        <div id="user_agent-method" class="method-detail ">
+          <a name="method-c-user_agent"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">user_agent</span><span
+              class="method-args">(ua="Rakkit")</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Get the user agent</p>
+
+<p>Example:</p>
+
+<pre>&gt;&gt; Debugger.user_agent(&quot;PANDR&quot;)
+=&gt; PANDR/V0.1</pre>
+
+<p>Arguments:</p>
+
+<pre>ua: (String)</pre>
+            
+
+            
+            <div class="method-source-code" id="user_agent-source">
+<pre>
+<span class="ruby-comment"># File lib/debugher.rb, line 344</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">user_agent</span>(<span class="ruby-identifier">ua</span>=<span class="ruby-string">&quot;Rakkit&quot;</span>)
+  <span class="ruby-node">&quot;#{ua}/V#{Debugher::VERSION}&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- user_agent-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- user_agent-method -->
+
+      
+        <div id="valid_url-3F-method" class="method-detail ">
+          <a name="method-c-valid_url-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">valid_url?</span><span
+              class="method-args">(url)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Check if a url is a valid url</p>
+
+<p>Example:</p>
+
+<pre>&gt;&gt; Debugger.valid_url?(&quot;http://wearepandr.com&quot;)
+=&gt; true</pre>
+
+<p>Arguments:</p>
+
+<pre>url: (String)</pre>
+            
+
+            
+            <div class="method-source-code" id="valid_url-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/debugher.rb, line 469</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">valid_url?</span>(<span class="ruby-identifier">url</span>)
+  <span class="ruby-operator">!</span>(<span class="ruby-identifier">url</span> <span class="ruby-operator">=~</span> <span class="ruby-constant">URI</span><span class="ruby-operator">::</span><span class="ruby-identifier">regexp</span>).<span class="ruby-identifier">nil?</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- valid_url-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- valid_url-3F-method -->
+
+      
+        <div id="version-method" class="method-detail ">
+          <a name="method-c-version"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">version</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Get the current version</p>
+
+<p>Example:</p>
+
+<pre>&gt;&gt; Debugger.version
+=&gt; V0.1</pre>
+            
+
+            
+            <div class="method-source-code" id="version-source">
+<pre>
+<span class="ruby-comment"># File lib/debugher.rb, line 353</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">version</span>
+  <span class="ruby-node">&quot;V#{Debugher::VERSION}&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- version-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- version-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="atom_feed_url-method" class="method-detail ">
+          <a name="method-i-atom_feed_url"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">atom_feed_url</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Get the Atom Feed URL</p>
+
+<p>Example:</p>
+
+<pre>&gt;&gt; Debugger.new(&quot;http://wearepandr.com&quot;).atom_feed_url
+=&gt; http://wearepandr.com/feed</pre>
+            
+
+            
+            <div class="method-source-code" id="atom_feed_url-source">
+<pre>
+<span class="ruby-comment"># File lib/debugher.rb, line 99</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">atom_feed_url</span>
+  <span class="ruby-identifier">atom_url</span> = <span class="ruby-identifier">page</span>.<span class="ruby-identifier">search</span>(<span class="ruby-string">&quot;link[@type='application/atom+xml']&quot;</span>)
+  <span class="ruby-identifier">atom_url</span> = <span class="ruby-identifier">atom_url</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span> <span class="ruby-operator">?</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">atom_url</span>.<span class="ruby-identifier">first</span>[<span class="ruby-string">'href'</span>]
+
+  <span class="ruby-identifier">atom_url</span> = <span class="ruby-constant">Debugger</span>.<span class="ruby-identifier">stitch_to_make_absolute</span>(<span class="ruby-identifier">canonical_url</span>, <span class="ruby-identifier">atom_url</span>) <span class="ruby-keyword">if</span> <span class="ruby-constant">Debugger</span>.<span class="ruby-identifier">relative?</span>(<span class="ruby-identifier">atom_url</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">atom_url</span>.<span class="ruby-identifier">to_s</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- atom_feed_url-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- atom_feed_url-method -->
+
+      
+        <div id="canonical_url-method" class="method-detail ">
+          <a name="method-i-canonical_url"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">canonical_url</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Get the canonical url of the page</p>
+
+<p>Example:</p>
+
+<pre>&gt;&gt; Debugger.new(&quot;http://rakkit.com&quot;).response_code
+=&gt; http://rakkit.com/</pre>
+            
+
+            
+            <div class="method-source-code" id="canonical_url-source">
+<pre>
+<span class="ruby-comment"># File lib/debugher.rb, line 63</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">canonical_url</span>
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-identifier">canonical_uri</span> = <span class="ruby-ivar">@uri</span>
+    <span class="ruby-identifier">canonical_uri</span>.<span class="ruby-identifier">path</span>  = <span class="ruby-string">''</span>
+    <span class="ruby-identifier">canonical_uri</span>.<span class="ruby-identifier">query</span> = <span class="ruby-keyword">nil</span>
+    <span class="ruby-identifier">canonical_uri</span> = <span class="ruby-identifier">canonical_uri</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;/&quot;</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">canonical_uri</span>.<span class="ruby-identifier">to_s</span>
+  <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Exception</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+    <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;CANONICAL ERROR: #{e}&quot;</span>
+    <span class="ruby-identifier">puts</span> <span class="ruby-ivar">@uri</span>.<span class="ruby-identifier">inspect</span>.<span class="ruby-identifier">to_s</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- canonical_url-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- canonical_url-method -->
+
+      
+        <div id="charset-method" class="method-detail ">
+          <a name="method-i-charset"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">charset</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Get the pages charset</p>
+
+<p>Example:</p>
+
+<pre>&gt;&gt; Debugger.new(&quot;http://wearepandr.com&quot;).charset
+=&gt; utf-8</pre>
+            
+
+            
+            <div class="method-source-code" id="charset-source">
+<pre>
+<span class="ruby-comment"># File lib/debugher.rb, line 314</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">charset</span>
+  <span class="ruby-ivar">@opened_url</span>.<span class="ruby-identifier">charset</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- charset-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- charset-method -->
+
+      
+        <div id="content_encoding-method" class="method-detail ">
+          <a name="method-i-content_encoding"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">content_encoding</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Get the pages content encoding</p>
+
+<p>Example:</p>
+
+<pre>&gt;&gt; Debugger.new(&quot;http://wearepandr.com&quot;).content_encoding
+=&gt; []</pre>
+            
+
+            
+            <div class="method-source-code" id="content_encoding-source">
+<pre>
+<span class="ruby-comment"># File lib/debugher.rb, line 323</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">content_encoding</span>
+  <span class="ruby-ivar">@opened_url</span>.<span class="ruby-identifier">content_encoding</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- content_encoding-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- content_encoding-method -->
+
+      
+        <div id="content_type-method" class="method-detail ">
+          <a name="method-i-content_type"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">content_type</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Get the pages content type</p>
+
+<p>Example:</p>
+
+<pre>&gt;&gt; Debugger.new(&quot;http://wearepandr.com&quot;).content_type
+=&gt; text/html</pre>
+            
+
+            
+            <div class="method-source-code" id="content_type-source">
+<pre>
+<span class="ruby-comment"># File lib/debugher.rb, line 305</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">content_type</span>
+  <span class="ruby-ivar">@opened_url</span>.<span class="ruby-identifier">content_type</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- content_type-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- content_type-method -->
+
+      
+        <div id="description-method" class="method-detail ">
+          <a name="method-i-description"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">description</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Get the page description</p>
+
+<p>Example:</p>
+
+<pre>&gt;&gt; Debugger.new(&quot;http://wearepandr.com&quot;).description
+=&gt; A custom Web Design Norwich and Norwich Ruby on Rails Web Development agency based in Norfolk, UK</pre>
+            
+
+            
+            <div class="method-source-code" id="description-source">
+<pre>
+<span class="ruby-comment"># File lib/debugher.rb, line 158</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">description</span>
+  <span class="ruby-identifier">description</span> = <span class="ruby-identifier">page</span>.<span class="ruby-identifier">css</span>(<span class="ruby-string">&quot;meta[name='description']/@content&quot;</span>).<span class="ruby-identifier">inner_html</span>.<span class="ruby-identifier">strip</span>
+  <span class="ruby-identifier">description</span> = <span class="ruby-identifier">description</span> <span class="ruby-operator">==</span> <span class="ruby-string">''</span> <span class="ruby-operator">?</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">description</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">description</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- description-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- description-method -->
+
+      
+        <div id="feed_url-method" class="method-detail ">
+          <a name="method-i-feed_url"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">feed_url</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Get the FEED URL, no matter if it’s the Atom URL or the RSS URL</p>
+
+<p>Example:</p>
+
+<pre>&gt;&gt; Debugger.new(&quot;http://wearepandr.com&quot;).feed_url
+=&gt; http://wearepandr.com/feed</pre>
+            
+
+            
+            <div class="method-source-code" id="feed_url-source">
+<pre>
+<span class="ruby-comment"># File lib/debugher.rb, line 112</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">feed_url</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">rss_feed_url</span> <span class="ruby-operator">!=</span> <span class="ruby-string">''</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">atom_feed_url</span> <span class="ruby-operator">!=</span> <span class="ruby-string">''</span>
+    <span class="ruby-identifier">feed_url</span> = <span class="ruby-identifier">rss_feed_url</span> <span class="ruby-operator">!=</span> <span class="ruby-string">''</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">rss_feed_url</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">atom_feed_url</span>
+    
+    <span class="ruby-keyword">if</span> <span class="ruby-constant">Debugger</span>.<span class="ruby-identifier">relative?</span>(<span class="ruby-identifier">feed_url</span>)
+      <span class="ruby-identifier">feed_url</span> = <span class="ruby-constant">Debugger</span>.<span class="ruby-identifier">stitch_to_make_absolute</span>(<span class="ruby-identifier">canonical_url</span>, <span class="ruby-identifier">feed_url</span>)
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">feed_url</span> = <span class="ruby-identifier">feed_url</span>
+    <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">feed_url</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- feed_url-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- feed_url-method -->
+
+      
+        <div id="fetched_url-method" class="method-detail ">
+          <a name="method-i-fetched_url"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">fetched_url</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Return the fecthed URL</p>
+
+<p>Example:</p>
+
+<pre>&gt;&gt; Debugger.new(&quot;rakkit.com&quot;).fetched_url
+=&gt; http://rakkit.com</pre>
+            
+
+            
+            <div class="method-source-code" id="fetched_url-source">
+<pre>
+<span class="ruby-comment"># File lib/debugher.rb, line 54</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">fetched_url</span>
+  <span class="ruby-ivar">@uri</span>.<span class="ruby-identifier">to_s</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- fetched_url-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- fetched_url-method -->
+
+      
+        <div id="host-method" class="method-detail ">
+          <a name="method-i-host"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">host</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Get all the links from the page</p>
+
+<p>Example:</p>
+
+<pre>&gt;&gt; Debugger.new(&quot;http://wearepandr.com&quot;).host
+=&gt; wearepandr.com</pre>
+            
+
+            
+            <div class="method-source-code" id="host-source">
+<pre>
+<span class="ruby-comment"># File lib/debugher.rb, line 296</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">host</span>
+  <span class="ruby-constant">Addressable</span><span class="ruby-operator">::</span><span class="ruby-constant">URI</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-ivar">@uri</span>).<span class="ruby-identifier">host</span>  
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- host-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- host-method -->
+
+      
+        <div id="internal_links-method" class="method-detail ">
+          <a name="method-i-internal_links"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">internal_links</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Get the internal page links from the page</p>
+
+<p>Example:</p>
+
+<pre>&gt;&gt; Debugger.new(&quot;http://wearepandr.com&quot;).internal_links
+=&gt; [&quot;http://wearepandr.com/about&quot;, &quot;http://wearepandr.com/blog&quot;]</pre>
+            
+
+            
+            <div class="method-source-code" id="internal_links-source">
+<pre>
+<span class="ruby-comment"># File lib/debugher.rb, line 250</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">internal_links</span>
+  <span class="ruby-identifier">links</span> = []
+  <span class="ruby-identifier">current_host</span> = <span class="ruby-ivar">@uri</span>.<span class="ruby-identifier">host</span>
+
+  <span class="ruby-identifier">page_links</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">link</span><span class="ruby-operator">|</span>
+    
+    <span class="ruby-comment"># Remove anchors from links</span>
+
+    <span class="ruby-identifier">new_link</span> = <span class="ruby-identifier">link</span>[<span class="ruby-string">'href'</span>].<span class="ruby-identifier">nil?</span> <span class="ruby-operator">?</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">link</span>[<span class="ruby-string">'href'</span>].<span class="ruby-identifier">split</span>(<span class="ruby-node">&quot;#&quot;</span>)[<span class="ruby-value">0</span>]
+    
+    <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">new_link</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">new_link</span>.<span class="ruby-identifier">strip</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-constant">Debugger</span>.<span class="ruby-identifier">mailto_link?</span>(<span class="ruby-identifier">new_link</span>)
+      
+      <span class="ruby-identifier">new_link</span> = <span class="ruby-constant">Debugger</span>.<span class="ruby-identifier">make_absolute</span>(<span class="ruby-identifier">new_link</span>)
+
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">new_link</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>
+        
+        <span class="ruby-comment"># Check to see if the URL is still from the current site</span>
+        <span class="ruby-comment">#</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">current_host</span> <span class="ruby-operator">==</span> <span class="ruby-constant">Addressable</span><span class="ruby-operator">::</span><span class="ruby-constant">URI</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">new_link</span>).<span class="ruby-identifier">host</span>
+          <span class="ruby-identifier">links</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">new_link</span>
+        <span class="ruby-keyword">end</span>
+
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">links</span> = <span class="ruby-identifier">links</span>.<span class="ruby-identifier">uniq</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">links</span>.<span class="ruby-identifier">compact</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- internal_links-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- internal_links-method -->
+
+      
+        <div id="last_modified-method" class="method-detail ">
+          <a name="method-i-last_modified"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">last_modified</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Get the pages last modified date</p>
+
+<p>Example:</p>
+
+<pre>&gt;&gt; Debugger.new(&quot;http://wearepandr.com&quot;).last_modified
+=&gt;</pre>
+            
+
+            
+            <div class="method-source-code" id="last_modified-source">
+<pre>
+<span class="ruby-comment"># File lib/debugher.rb, line 332</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">last_modified</span>
+  <span class="ruby-ivar">@opened_url</span>.<span class="ruby-identifier">last_modified</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- last_modified-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- last_modified-method -->
+
+      
+        <div id="meta_data-method" class="method-detail ">
+          <a name="method-i-meta_data"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">meta_data</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Get the page meta data in a hash, title and description.</p>
+
+<p>Example:</p>
+
+<pre>&gt;&gt; Debugger.new(&quot;http://wearepandr.com&quot;).meta_data
+=&gt; {:title =&gt; &quot;Web Design Norwich and Norwich Ruby on Rails Web Development in Norfolk |  PANDR&quot;,
+   :description =&gt; &quot;A custom Web Design Norwich and Norwich Ruby on Rails Web Development agency based in Norfolk, UK&quot;}</pre>
+            
+
+            
+            <div class="method-source-code" id="meta_data-source">
+<pre>
+<span class="ruby-comment"># File lib/debugher.rb, line 170</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">meta_data</span>
+  <span class="ruby-keyword">return</span> {<span class="ruby-value">:title</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">title</span>,
+          <span class="ruby-value">:description</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">description</span>}
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- meta_data-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- meta_data-method -->
+
+      
+        <div id="music_from_feed-method" class="method-detail ">
+          <a name="method-i-music_from_feed"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">music_from_feed</span><span
+              class="method-args">(file_types=FILE_TYPES)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Get the music links from the feed found on the page</p>
+
+<p>Example:</p>
+
+<pre>&gt;&gt; Debugger.new(&quot;http://wearepandr.com&quot;).music_from_feed
+=&gt; [&quot;http://wearepandr.com/track_1.mp3&quot;, &quot;http://wearepandr.com/track_2.mp3&quot;, &quot;http://wearepandr.com/track_3.mp3&quot;]</pre>
+
+<p>Arguments:</p>
+
+<pre>file_types: [Array]</pre>
+            
+
+            
+            <div class="method-source-code" id="music_from_feed-source">
+<pre>
+<span class="ruby-comment"># File lib/debugher.rb, line 183</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">music_from_feed</span>(<span class="ruby-identifier">file_types</span>=<span class="ruby-constant">FILE_TYPES</span>)
+  <span class="ruby-identifier">links</span> = []
+  <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">feed_url</span>.<span class="ruby-identifier">nil?</span>
+   <span class="ruby-ivar">@feed</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">Nokogiri</span><span class="ruby-operator">::</span><span class="ruby-constant">XML</span>(<span class="ruby-identifier">open</span>(<span class="ruby-identifier">feed_url</span>))
+   <span class="ruby-ivar">@feed</span>.<span class="ruby-identifier">encoding</span> = <span class="ruby-string">'utf-8'</span>
+   <span class="ruby-identifier">channel</span> = <span class="ruby-ivar">@feed</span>.<span class="ruby-identifier">search</span>(<span class="ruby-string">'//channel'</span>)
+
+   <span class="ruby-comment"># If the blog isn't set up with channels then we can </span>
+   <span class="ruby-comment"># search the data we have for all links that end in .mp3 x</span>
+   <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">channel</span>.<span class="ruby-identifier">empty?</span>
+     <span class="ruby-identifier">items</span> = <span class="ruby-ivar">@feed</span>.<span class="ruby-identifier">search</span>(<span class="ruby-string">&quot;//channel/item&quot;</span>)
+     <span class="ruby-identifier">items</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">item</span><span class="ruby-operator">|</span>
+       <span class="ruby-identifier">enclosures</span> = <span class="ruby-identifier">item</span>.<span class="ruby-identifier">search</span>(<span class="ruby-string">&quot;//channel/item/enclosure&quot;</span>)
+        <span class="ruby-identifier">enclosures</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">enclosure</span><span class="ruby-operator">|</span>
+          <span class="ruby-identifier">enclosure_file</span> = <span class="ruby-identifier">enclosure</span>[<span class="ruby-string">'url'</span>].<span class="ruby-identifier">to_s</span>[<span class="ruby-value">-4</span>,<span class="ruby-value">4</span>]
+          <span class="ruby-identifier">links</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">enclosure</span>[<span class="ruby-string">'url'</span>] <span class="ruby-keyword">if</span> <span class="ruby-identifier">file_types</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">enclosure_file</span>)
+        <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">links</span> = <span class="ruby-identifier">links</span>.<span class="ruby-identifier">uniq</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">links</span>.<span class="ruby-identifier">compact</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- music_from_feed-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- music_from_feed-method -->
+
+      
+        <div id="music_from_html-method" class="method-detail ">
+          <a name="method-i-music_from_html"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">music_from_html</span><span
+              class="method-args">(file_types=FILE_TYPES)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Get the music links from the page html</p>
+
+<p>Example:</p>
+
+<pre>&gt;&gt; Debugger.new(&quot;http://wearepandr.com&quot;).music_from_html
+=&gt; [&quot;http://wearepandr.com/track_1.mp3&quot;, &quot;http://wearepandr.com/track_2.mp3&quot;, &quot;http://wearepandr.com/track_3.mp3&quot;]</pre>
+
+<p>Arguments:</p>
+
+<pre>file_types: [Array]</pre>
+            
+
+            
+            <div class="method-source-code" id="music_from_html-source">
+<pre>
+<span class="ruby-comment"># File lib/debugher.rb, line 215</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">music_from_html</span>(<span class="ruby-identifier">file_types</span>=<span class="ruby-constant">FILE_TYPES</span>)
+  <span class="ruby-identifier">links</span> = []
+  
+  <span class="ruby-identifier">page_links</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">track</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">track_file</span> = <span class="ruby-identifier">track</span>[<span class="ruby-string">'href'</span>].<span class="ruby-identifier">to_s</span>[<span class="ruby-value">-4</span>,<span class="ruby-value">4</span>]
+    
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">file_types</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">track_file</span>)
+      <span class="ruby-identifier">links</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">track</span>[<span class="ruby-string">&quot;href&quot;</span>]
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">links</span> = <span class="ruby-identifier">links</span>.<span class="ruby-identifier">uniq</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">links</span>.<span class="ruby-identifier">compact</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- music_from_html-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- music_from_html-method -->
+
+      
+        <div id="music_from_soundcloud-method" class="method-detail ">
+          <a name="method-i-music_from_soundcloud"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">music_from_soundcloud</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Get the soundcloud music links from the page html</p>
+
+<p>Example:</p>
+
+<pre>&gt;&gt; Debugger.new(&quot;http://wearepandr.com&quot;).music_from_soundcloud
+=&gt; [&quot;http://api.soundcloud.com/playlists/2153957&quot;, &quot;http://api.soundcloud.com/playlists/2153958&quot;]</pre>
+            
+
+            
+            <div class="method-source-code" id="music_from_soundcloud-source">
+<pre>
+<span class="ruby-comment"># File lib/debugher.rb, line 234</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">music_from_soundcloud</span>
+  <span class="ruby-identifier">links</span> = []
+  <span class="ruby-ivar">@html_url</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">Nokogiri</span><span class="ruby-operator">::</span><span class="ruby-constant">HTML</span>(<span class="ruby-identifier">open</span>(<span class="ruby-ivar">@uri</span>))
+  <span class="ruby-ivar">@html_url</span>.<span class="ruby-identifier">search</span>(<span class="ruby-string">&quot;//iframe&quot;</span>, <span class="ruby-string">&quot;//param&quot;</span>).<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">url</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">object_url</span> = <span class="ruby-identifier">url</span>[<span class="ruby-string">&quot;src&quot;</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">url</span>[<span class="ruby-string">&quot;value&quot;</span>]
+    <span class="ruby-identifier">links</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-constant">Debugger</span>.<span class="ruby-identifier">get_soundcloud_url</span>(<span class="ruby-identifier">object_url</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">links</span> = <span class="ruby-identifier">links</span>.<span class="ruby-identifier">uniq</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">links</span>.<span class="ruby-identifier">compact</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- music_from_soundcloud-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- music_from_soundcloud-method -->
+
+      
+        <div id="open_url-method" class="method-detail ">
+          <a name="method-i-open_url"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">open_url</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="open_url-source">
+<pre>
+<span class="ruby-comment"># File lib/debugher.rb, line 22</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">open_url</span>
+  <span class="ruby-identifier">url_object</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-identifier">ua</span> = <span class="ruby-constant">Debugger</span>.<span class="ruby-identifier">user_agent</span>
+  <span class="ruby-ivar">@robot</span> = <span class="ruby-constant">Robots</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ua</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@robot</span>.<span class="ruby-identifier">allowed?</span>(<span class="ruby-ivar">@uri</span>)
+    <span class="ruby-keyword">begin</span>
+      <span class="ruby-identifier">url_object</span> = <span class="ruby-identifier">open</span>(<span class="ruby-ivar">@uri</span>,
+                   <span class="ruby-string">&quot;User-Agent&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">ua</span>,
+                   <span class="ruby-string">&quot;From&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;hello@rakkit.com&quot;</span>,
+                   <span class="ruby-string">&quot;Referer&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;http://rakkit.com&quot;</span>)
+    <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Exception</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+      <span class="ruby-comment"># Most likely a 404 error</span>
+      <span class="ruby-identifier">$stderr</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Unable to open url: #{url} - #{e}&quot;</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">url_object</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- open_url-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- open_url-method -->
+
+      
+        <div id="page-method" class="method-detail ">
+          <a name="method-i-page"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">page</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>loads the Hpricot XML object if it hasn’t already been loaded</p>
+            
+
+            
+            <div class="method-source-code" id="page-source">
+<pre>
+<span class="ruby-comment"># File lib/debugher.rb, line 77</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">page</span>
+  <span class="ruby-ivar">@page</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">Nokogiri</span><span class="ruby-operator">::</span><span class="ruby-constant">HTML</span>(<span class="ruby-ivar">@opened_url</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- page-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- page-method -->
+
+      
+        <div id="page_links-method" class="method-detail ">
+          <a name="method-i-page_links"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">page_links</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Get all the links from the page</p>
+
+<p>Example:</p>
+
+<pre>&gt;&gt; Debugger.new(&quot;http://wearepandr.com&quot;).page_links
+=&gt; [&quot;http://wearepandr.com/about&quot;, &quot;http://google.com&quot;, &quot;http://yahoo.com&quot;]</pre>
+            
+
+            
+            <div class="method-source-code" id="page_links-source">
+<pre>
+<span class="ruby-comment"># File lib/debugher.rb, line 284</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">page_links</span>
+  <span class="ruby-ivar">@html_url</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">Nokogiri</span><span class="ruby-operator">::</span><span class="ruby-constant">HTML</span>(<span class="ruby-identifier">open</span>(<span class="ruby-ivar">@uri</span>))
+
+  <span class="ruby-identifier">links</span> = <span class="ruby-ivar">@html_url</span>.<span class="ruby-identifier">search</span>(<span class="ruby-string">&quot;//a&quot;</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">links</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- page_links-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- page_links-method -->
+
+      
+        <div id="response_code-method" class="method-detail ">
+          <a name="method-i-response_code"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">response_code</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Get the response code of the page</p>
+
+<p>Example:</p>
+
+<pre>&gt;&gt; Debugger.new(&quot;http://rakkit.com&quot;).response_code
+=&gt; 200 OK</pre>
+            
+
+            
+            <div class="method-source-code" id="response_code-source">
+<pre>
+<span class="ruby-comment"># File lib/debugher.rb, line 45</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">response_code</span>
+  <span class="ruby-ivar">@opened_url</span>.<span class="ruby-identifier">status</span>.<span class="ruby-identifier">join</span>(<span class="ruby-string">&quot; &quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- response_code-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- response_code-method -->
+
+      
+        <div id="rss_feed_url-method" class="method-detail ">
+          <a name="method-i-rss_feed_url"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">rss_feed_url</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Get the RSS Feed URL</p>
+
+<p>Example:</p>
+
+<pre>&gt;&gt; Debugger.new(&quot;http://wearepandr.com&quot;).rss_feed_url
+=&gt; http://wearepandr.com/feed</pre>
+            
+
+            
+            <div class="method-source-code" id="rss_feed_url-source">
+<pre>
+<span class="ruby-comment"># File lib/debugher.rb, line 86</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">rss_feed_url</span>
+  <span class="ruby-identifier">rss_url</span> = <span class="ruby-identifier">page</span>.<span class="ruby-identifier">search</span>(<span class="ruby-string">&quot;link[@type='application/rss+xml']&quot;</span>)
+  <span class="ruby-identifier">rss_url</span> = <span class="ruby-identifier">rss_url</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span> <span class="ruby-operator">?</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">rss_url</span>.<span class="ruby-identifier">first</span>[<span class="ruby-string">'href'</span>]
+
+  <span class="ruby-identifier">rss_url</span> = <span class="ruby-constant">Debugger</span>.<span class="ruby-identifier">stitch_to_make_absolute</span>(<span class="ruby-identifier">canonical_url</span>, <span class="ruby-identifier">rss_url</span>) <span class="ruby-keyword">if</span> <span class="ruby-constant">Debugger</span>.<span class="ruby-identifier">relative?</span>(<span class="ruby-identifier">rss_url</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">rss_url</span>.<span class="ruby-identifier">to_s</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- rss_feed_url-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- rss_feed_url-method -->
+
+      
+        <div id="scrape_info-method" class="method-detail ">
+          <a name="method-i-scrape_info"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">scrape_info</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Return some meta info about the page</p>
+
+<p>Example:</p>
+
+<pre>&gt;&gt; Debugger.new(&quot;http://wearepandr.com&quot;).scrape_info
+=&gt; {:response_code =&gt; &quot;200 OK&quot;,
+    :fetched_url =&gt; &quot;http://wearepandr.com&quot;,
+    :canonical_url =&gt; &quot;http://wearepandr.com/&quot;,
+    :feed_url =&gt; &quot;http://wearepandr.com/feed&quot;}</pre>
+            
+
+            
+            <div class="method-source-code" id="scrape_info-source">
+<pre>
+<span class="ruby-comment"># File lib/debugher.rb, line 135</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">scrape_info</span>
+  <span class="ruby-keyword">return</span> {<span class="ruby-value">:response_code</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">response_code</span>,
+          <span class="ruby-value">:fetched_url</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">fetched_url</span>,
+          <span class="ruby-value">:canonical_url</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">canonical_url</span>,
+          <span class="ruby-value">:feed_url</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">feed_url</span>}  
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- scrape_info-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- scrape_info-method -->
+
+      
+        <div id="title-method" class="method-detail ">
+          <a name="method-i-title"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">title</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Get the page title</p>
+
+<p>Example:</p>
+
+<pre>&gt;&gt; Debugger.new(&quot;http://wearepandr.com&quot;).title
+=&gt; Web Design Norwich and Norwich Ruby on Rails Web Development in Norfolk |  PANDR</pre>
+            
+
+            
+            <div class="method-source-code" id="title-source">
+<pre>
+<span class="ruby-comment"># File lib/debugher.rb, line 147</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">title</span>
+  <span class="ruby-identifier">title</span> = <span class="ruby-identifier">page</span>.<span class="ruby-identifier">css</span>(<span class="ruby-string">'title'</span>)[<span class="ruby-value">0</span>].<span class="ruby-identifier">inner_html</span>.<span class="ruby-identifier">strip</span>
+  <span class="ruby-identifier">title</span> = <span class="ruby-identifier">title</span> <span class="ruby-operator">==</span> <span class="ruby-string">''</span> <span class="ruby-operator">?</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">title</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">title</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- title-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- title-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+
